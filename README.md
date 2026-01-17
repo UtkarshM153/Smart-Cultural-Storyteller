@@ -58,47 +58,108 @@ The application follows a modular workflow:
 
 ---
 
-## ▶️ How to Run the Project
+Here is the **clean, properly formatted GitHub README section** in **Markdown**, ready to paste directly into your `README.md` 👇
 
-1. Clone the repository:
+---
+
+## 🖥️ How to Run the Project Locally
+
+Follow the steps below to set up and run the **Smart Cultural Storyteller** on your local machine.
+
+---
+
+### 1️⃣ Prerequisites
+
+Ensure the following are installed on your system:
+
+* Python **3.9 or higher**
+* `pip` (Python package manager)
+* Git
+
+---
+
+### 2️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/smart-cultural-storyteller.git
+git clone https://github.com/your-username/SMART_STORYTELLER.git
+cd SMART_STORYTELLER
 ```
 
-2. Navigate to the project directory:
+---
+
+### 3️⃣ Create a Virtual Environment (Recommended)
 
 ```bash
-cd smart-cultural-storyteller
+python -m venv venv
 ```
 
-3. Install dependencies:
+Activate the virtual environment:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**macOS / Linux**
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### 4️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Run the application:
+---
+
+### 5️⃣ Configure Environment Variables
+
+Create a `.env` file in the root directory and add your API keys:
+
+```env
+GROQ_API_KEY=your_groq_api_key
+NANO_BANANA_API_KEY=your_nano_banana_api_key
+```
+
+⚠️ **Never commit the `.env` file to a public repository.**
+
+---
+
+### 6️⃣ Run the Application
+
+Start the Streamlit web application:
 
 ```bash
 streamlit run app.py
 ```
 
----
+Once running, open your browser and navigate to:
 
-## 🔑 API Configuration
-
-Before running the application, add your API keys:
-
-```python
-GROQ_API_KEY = "your_groq_api_key"
-NANO_BANANA_API_KEY = "your_nano_banana_api_key"
+```
+http://localhost:8501
 ```
 
-⚠️ **Do not expose API keys in public repositories.**
-
 ---
 
+### 7️⃣ Using the Application
+
+* Select a storytelling mode (Cultural, Ancestral, Emotion-Based, Interactive)
+* Choose the number of words for the story
+* Select the number of images to generate
+* Generate the story, images, and narrated output
+
+Generated files will be stored in:
+
+* `assets/images/`
+* `assets/audio/`
+* `assets/videos/`
+
+---
 ## 📊 Results
 
 * Successfully generates AI-based cultural stories
